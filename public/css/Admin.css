@@ -1,0 +1,476 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* -------------------------------リセット--------------------------------css */
+
+/* ---------------------------------------ヘッダー -------------------------------------------*/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  padding-top: 250px;
+}
+
+img[src="/img/logo.png"] {
+  width: 130px;
+  height: 110px;
+}
+
+#global-head {
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    width: 260px;
+    text-align: center;
+    padding-top: 60px;
+    z-index: 100;
+    color:white;
+    font-size: large;
+    border-right:1px solid;
+    border-color:rgb(61, 61, 61);
+}
+ 
+#sidebar {
+    font-size: 15px;
+    width: 260px;
+    height: 100%;
+    position: fixed;
+    background: rgb(0, 0, 0);
+    text-align: center;
+    border-right:1px solid;
+    border-color:rgb(61, 61, 61);
+}
+ 
+#global-nav ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+#global-nav > ul > li {
+    position: relative;
+    font-size:16px;
+    color:white;
+    padding:30px;
+}
+
+#global-nav p {
+  padding-top: 30px;
+  padding-bottom:30px;
+  color:white;
+}
+ 
+#global-nav a {
+    text-decoration: none;
+    display: block;
+    color:white;
+}
+
+img[src="/img/vct-youtube.2670ea0214.png"] {
+  height:25px; 
+  width:35px; 
+  padding-top:30px; 
+  padding-left:80px; 
+  padding-bottom:10px; 
+  display: flex;
+  flex-direction: column;
+}
+
+img[src="/img/31-311115_go-back-images-for-twitch-logo-transparent-twitch.png"] {
+  height:30px; 
+  width:35px; 
+  padding-top:30px; 
+  padding-left:80px; 
+  padding-bottom:10px; 
+  display: flex;
+  flex-direction: column;
+}
+
+/* nav-toggle */
+#nav-toggle {
+  display: none;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  height: 32px;
+  width:30px;
+}
+
+#nav-toggle span:nth-child(1) {
+  top: 0;
+}
+
+#nav-toggle span:nth-child(2) {
+  top: 11px;
+}
+
+#nav-toggle span:nth-child(3) {
+  top: 22px;
+}
+
+#nav-toggle span {
+  width: 100%;
+  height: 2px;
+  left: 0;
+  display: block;
+  background: white;
+  position: absolute;
+  -webkit-transition: .35s ease-in-out;
+  -moz-transition: .35s ease-in-out;
+  transition: .35s ease-in-out;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  background: rgba(235, 233, 233, 0.411);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+/* ------------------------------------メイン -----------------------------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  text-shadow: 2px 5px 2px rgba(29, 29, 29, 0.781);
+  box-sizing: border-box;
+  padding: 10px 40px;
+  background-image: url(../img/Valorant-1833663.png);
+  box-shadow: inset 5px 5px 5px 680px hwb(0 18% 81% / 0.555);
+  background-size: 100% auto;
+  color: rgb(255, 255, 255);
+  position:relative;
+  font-weight:10px;
+  margin-left: 260px;
+}
+
+.MatchSchedule {
+  font-size: 100px;
+  color:white;
+  background-color:rgb(0, 0, 0);
+  display:flex;
+  margin-left: 260px;
+  padding: 20px 40px;
+}
+
+.Tournament {
+  /*width:100%;*/
+  font-size:20px;
+  line-height: 200%;
+  text-align:left;
+  vertical-align:top;
+  margin: 0px 0px 0px 0px;
+  padding: 20px 0px 10px 20px;
+  /*position:absolute;*/
+}
+
+#main h2 {
+  font-size: 50px;
+}
+
+#main .catch {
+  padding-top: 100px;
+  font-size: 100px;
+}
+
+#main .catch strong {
+  color:yellow;
+}
+
+#main .Game {
+  font-size: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#main .Game h2 {
+  padding-bottom: 20px;
+}
+
+#main .Game strong {
+  color:red;
+}
+
+#main .Game {
+  font-size: 30px;
+}
+
+/* ------------------------------------------overview -------------------------------------------*/
+.overview {
+  margin-left: 260px;
+  background-image: url(../img/undefined.png);
+  box-shadow: inset 5px 5px 5px 680px hwb(0 0% 100% / 0.801);
+  color:white;
+}
+
+h3 {
+  font-size: 60px;
+  padding-bottom: 20px;
+  padding: 20px 40px;
+}
+
+.overview p {
+  padding: 5px;
+  font-size: 30px;
+  padding: 20px 40px;
+}
+/* ------------------------------------------TournamentSchedule -------------------------------------------*/
+
+.TournamentSchedule {
+  margin-left: 260px;
+  background-image: url(../img/undefined.png);
+  box-shadow: inset 5px 5px 5px 800px hwb(0 0% 100% / 0.801);
+  color:white;
+}
+
+h4 {
+  font-size: 60px;
+  padding-bottom: 20px;
+  padding: 20px 40px;
+  border-top:1px solid;
+  border-color:rgb(61, 61, 61);
+}
+
+.TournamentSchedule p {
+  padding: 5px;
+  font-size: 30px;
+  padding: 20px 40px;
+}
+
+/* ------------------------------------------テーブル -------------------------------------------*/
+
+.db_list{
+  font-size: 20px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: white;
+  color:black;
+}
+
+.db_list table {
+  border: 1px #676767 solid;
+}
+
+.db_list th,td {
+  border-bottom: 1px #676767 solid;
+  border-right:  1px #676767 solid;
+}
+
+.db_list th {
+  background-color: #aaa;
+  table-layout: fixed;
+  width: 5%;
+  padding: 5px;
+}
+
+.db_list db_table {
+  margin: auto;
+}
+
+/* ------------------------------------------フッター -------------------------------------------*/
+footer {
+  box-sizing: border-box;
+  border-top:1px solid;
+  border-color:rgb(61, 61, 61);
+  background: black;
+}
+
+.head {
+  padding-top: 30px;
+  padding-left: 100px;
+}
+
+.head span {
+  display: block;
+  color: #0db397;
+  text-align: left;
+  font-size: 20px;
+  line-height: 30px;
+  padding-left: 210px;
+}
+
+.head h1 {
+  color: #0db397;
+  text-align: left;
+  font-size: 50px;
+  line-height: 15px;
+  display: inline-block;
+  font-family: 'Tungsten-Bold', sans-serif;
+  padding-top:20px;
+  padding-left: 210px;
+}
+
+.footer_img {
+  padding-left: 280px;
+  background: black;
+}
+
+/* ------------------------------------------レスポンシブ -------------------------------------------*/
+@media screen and (max-width: 900px) {
+/* ----------------------------------------ハンバーガーボタン -------------------------------------------*/
+  #global-head {
+      width: 100%;
+      padding: 10px;
+      display: flex;
+  }
+
+  #sidebar {
+      position: fixed;
+      right: -300px;
+      top: 0;
+      height: 100%;
+      width: 300px;
+      color: #333;
+      background: rgb(2, 2, 2);
+      transition: .35s ease-in-out;
+  }
+
+  #nav-toggle {
+      display: block;
+      border-color:white;
+  }
+
+  /* nav open */
+  .open {
+      overflow: hidden;
+  }
+  .open #overlay {
+      display: block;
+  }
+  .open #sidebar  {
+      transform: translate3d(-300px,0,0);
+  }
+
+  /* #nav-toggle close */
+  .open #nav-toggle span:nth-child(1) {
+      top: 11px;
+      transform: rotate(45deg);
+  }
+  .open #nav-toggle span:nth-child(2) {
+      width: 0;
+      left: 50%;
+  }
+  .open #nav-toggle span:nth-child(3) {
+      top: 11px;
+      transform: rotate(-45deg);
+  }
+
+  /* z-index */
+  #overlay {
+      z-index: 200;
+  }
+  #sidebar {
+      z-index: 300;
+  }
+  #nav-toggle {
+      z-index: 400;
+  }
+
+  nav {
+    padding-top: 100px;
+  }
+/* ------------------------------------------　header　-------------------------------------------*/
+  header h2 {
+    font-size: 40px;
+    padding:20px;
+    padding-right: 45px;
+  }
+/* ------------------------------------------　main　-------------------------------------------*/
+  body {
+    width:100%;
+  }
+
+  .MatchSchedule {
+    margin-left: 0px;
+    padding-top: 200px;
+    padding-right:10px;
+  }
+
+  #main {
+    margin: 0px;
+  }
+
+  #main h1{
+    margin-top: 200px;
+    width:100%;
+  }
+
+  .Tournament {
+    font-size: 80%;
+  }
+
+  .overview {
+    margin: 0;
+  }
+
+  .TournamentSchedule{
+    margin: 0;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer .head {
+    padding-left: 30px;
+  }
+
+  footer .head span {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  footer .head h1 {
+    padding-left: 0;
+  }
+
+  .footer_img {
+    padding: 0;
+  }
+
+}

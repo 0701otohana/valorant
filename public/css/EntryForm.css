@@ -1,0 +1,251 @@
+@charset "UTF-8";
+
+img[src="img/logo.png"] {
+  width: 130px;
+  height: 110px;
+}
+
+#global-head {
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  z-index: 100;
+  color:white;
+  font-size: large;
+  border-right:1px solid;
+  border-color:rgb(61, 61, 61);
+  justify-content: space-between;
+}
+
+#global-head h2 {
+  font-size:40px;
+}
+
+
+#global-head {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: rgb(44, 44, 44);
+    margin:0px;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+.contact {
+    width: 960px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.contact-ttl {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-table {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+.contact-item,
+.contact-body {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.contact-item {
+    text-align: left;
+    width: 30%;
+    background-color: #eee;
+}
+
+.contact-body {
+    width: 70%;
+}
+
+.form-text {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    max-width: 400px;
+}
+
+.contact-sex + .contact-sex {
+    margin-left: 10px;
+}
+
+.contact-sex-txt {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.form-select {
+    width: 180px;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-skill {
+    display: block;
+}
+
+.contact-skill + .contact-skill {
+    margin-top: 10px;
+}
+
+.contact-skill-txt {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  height: 200px;
+  border-radius: 5px;
+  border: 1px solid rgb(204, 204, 204);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.contact-submit {
+  width: 250px;
+  border: 2px solid #04c243;
+  color:rgb(75, 185, 2);
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 100vh;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: 0.5s;
+  height:44px;
+}
+
+.contact-submit:hover {
+	color: #fff;
+	background: #03af3c;
+}
+
+.back {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin: auto;
+  font-weight: bold;
+  border: 2px solid #444444;
+  color: #000000;
+  border-radius: 70px;
+  transition: 0.5s;
+  line-height: 40px;
+  width: 250px;
+  margin-top: 40px;
+}
+
+.back:hover {
+	color: #fff;
+	background: #3b3b3b;
+}
+
+.error {
+  color: red;
+  padding-top: 10px;
+  font-size: 13px;
+}
+
+/* ------------------------------------------フッター -------------------------------------------*/
+footer {
+  box-sizing: border-box;
+  border-top:1px solid;
+  border-color:rgb(61, 61, 61);
+  background: black;
+}
+
+.head {
+  padding-top: 60px;
+  padding-left: 40px;
+}
+
+.head span {
+  display: block;
+  color: #0db397;
+  text-align: left;
+  font-size: 20px;
+  line-height: 10px;
+  padding-left: 30px;
+}
+
+.head h1 {
+  color: #0db397;
+  text-align: left;
+  font-size: 50px;
+  line-height: 15px;
+  display: inline-block;
+  font-family: 'Tungsten-Bold', sans-serif;
+  padding-left: 30px;
+}
+
+.footer_img {
+  padding-left: 40px;
+  background: black;
+  margin-top: -20px;
+}
+
+footer img {
+  width:300px !important;
+}
+
+@media screen and (max-width: 765px) {
+
+  footer {
+    text-align: center;
+  }
+
+  #valo-logo {
+    padding-top:20px;
+  }
+
+  .contact {
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+
+  footer .head {
+    padding-left: 30px;
+  }
+
+  footer .head span {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  footer .head h1 {
+    padding-left: 0;
+  }
+
+  .footer_img {
+    padding: 0;
+  }
+
+}
