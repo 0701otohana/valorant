@@ -12,7 +12,7 @@
     <img class="logo" src="/img/logo_riot.png">
         <div class="title-box3">
             <div class="title-box3-title">パスワード再設定</div>
-            <form class="form-ResetPassWord" method="POST" action="{{ route('password.update') }}">
+            <form class="form-ResetPassWord" method="POST" action="{{ route('user.password.update') }}">
             @csrf
             <input type="hidden" name="token" value="{{ $request->route('token') }}">
                 <h1 class="h3 mb-3 font-weight-normal">新しくパスワードを設定してください</h1> 
