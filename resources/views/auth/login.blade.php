@@ -29,7 +29,17 @@
                     @if ($errors->has('password'))
                         <div class="error">{{ $errors->first('password') }}</div>
                     @endif
-                    <div class="API-wrapper"><div>API</div><div>API</div><div>API</div></div>
+                    <div class="API-wrapper">
+                        <div class="form-group row mt-2">
+                            <div class="col-md-8 offset-md-4">
+                                <a href="/login/google" class="btn btn-secondary" role="button">
+                                    <img src="\img\ダウンロード.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div>API</div>
+                        <div>API</div>
+                    </div>
                     <button class="btn btn-lg btn-primary btn-block" type="submit">ログイン</button>
                     <div class="signup">Riot IDをお持ちでない方 <a href="{{ ('/signup') }}" class="btn_03"><p>新規登録はこちら</p></a></div>
                     <div class="reset">パスワードをお忘れの場合 <a href="{{ url('/forgot-password') }}" class="btn_03"><p>パスワードリセット</p></a></div>

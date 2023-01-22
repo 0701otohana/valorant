@@ -5,6 +5,8 @@ namespace App\Http\Controllers\User\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Socialite;
+use App\Models\User;
 
 class LoginController extends Controller
 {
@@ -43,5 +45,34 @@ class LoginController extends Controller
     {        
         return redirect()->intended('complete');
     }
+//----------------------------google-------------------------------
+    public function redirectToGoogle()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    public function handleGoogleCallback()
+    {
+        $gUser = Socialite::driver('google')->stateless()->user();
+        // email が合致するユーザーを取得
+        $user = User::where('email', $gUser->email)->first();
+        // 見つからなければ新しくユーザーを作成
+        if ($user == null) {
+            //$user = $this->createUserByGoogle($gUser);
+            return redirect('/signup');
+        }
+        // ログイン処理
+        \Auth::login($user, true);
+        return redirect('/EntryForm');
+    }
+
+    //public function createUserByGoogle($gUser)
+    //{
+        //$user = User::create([
+            //'email'    => $gUser->email,
+            //'password' => \Hash::make(uniqid()),
+        //]);
+        //return $user;
+    //}
     
 }

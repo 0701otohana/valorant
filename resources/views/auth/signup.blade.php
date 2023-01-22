@@ -26,8 +26,6 @@
                         <div class="error">{{ $errors->first('password') }}</div>
                     @endif
                     <input type="password" id="inputPassword" name="password_confirmation" class="form-control" placeholder="Password">
-                    
-                    <div class="API-wrapper"><div>API</div><div>API</div><div>API</div></div>
                 <button class="btn btn-lg btn-primary btn-block" type="submit">新規登録</button>
                     <a class="back" href="{{ url('/main') }}">ホームに戻る</a>
             </form>

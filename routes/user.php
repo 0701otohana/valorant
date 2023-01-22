@@ -13,6 +13,8 @@ use App\Http\Controllers\User\Auth\VerifyEmailController;
 use App\Http\Controllers\User\Auth\ValorantController;
 use App\Http\Controllers\EntryteamController;
 use App\Notifications\CustomResetPassWordNotification;
+use App\Http\Controllers\User\Auth\LoginController;
+use App\Http\Controllers\User\Auth\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -99,3 +101,7 @@ Route::post('/confirm-password', [ConfirmablePasswordController::class, 'store']
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
     ->middleware('auth:users')
     ->name('logout');
+
+Route::get('login/google', [LoginController::class, 'redirectToGoogle']);
+
+Route::get('login/google/callback', [LoginController::class, 'handleGoogleCallback']);
