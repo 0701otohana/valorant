@@ -23,11 +23,4 @@ class EntryteamController extends Controller
 
         return redirect('complete');
     }
-
-        public function Entry_all(){
-        $e_all = Entryteam::all();
-        $q_get = DB::table('entryteams')->select('team')->get();
-        $q_first = DB::table('entryteams')->select('team')->first();
-        
-    }
 }

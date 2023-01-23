@@ -370,19 +370,25 @@
       <p>9月15日（木）  休息日</p>
       <p>DAY6:9月16日（金）</p>
       <p>-23:00</p>
+      
       <table class="db_list" >
         <tr>
           <th>エントリーチーム名</th>
           <th>編集</th>
           <th>削除</th>
         </tr>
-        {{-- @foreach($result as $row) --}}
+        @foreach ($Entryteams as $Entryteam)
           <tr>
-          <td> {{-- {{ $row->team }} --}} </td>
-          <td><button style="margin-top: 5px;"><a href="{{-- {{ route ('edit',['id' => $row->id ]) }} --}}">編集</button></td>
-          <td><button><a href="{{-- {{ route ('delete',['id' => $row->id ]) }} --}}"onclick="return confirm('削除してもよろしいですか？')">削除</a></button></td>
+          <td> {{ $Entryteam->team }} </td>
+          <td><button style="margin-top: 5px;"><a href="{{ route('admin.EntryteamEdit',['id' => $Entryteam->id ]) }}">編集</button></td>
+          <td>
+              <form action="{{ route('admin.EntryteamDelete',['id' => $Entryteam->id ]) }}" method="POST" onclick="return confirm('削除してもよろしいですか？')">
+              @csrf
+              <button type="submit">削除</button>
+              </form>
+          </td>
           </tr>
-        {{-- @endforeach --}}
+        @endforeach
       </table>
     </div>
   </section>

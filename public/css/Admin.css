@@ -304,7 +304,7 @@ h4 {
 .db_list th {
   background-color: #aaa;
   table-layout: fixed;
-  width: 5%;
+  width: 300px;
   padding: 5px;
 }
 

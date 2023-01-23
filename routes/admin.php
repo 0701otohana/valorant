@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AdminAuth;
 use App\Http\Controllers\User\Auth\ValorantController;
+use App\Http\Controllers\Admin\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,17 +37,21 @@ Route::post('/admin.login', [AuthenticatedSessionController::class, 'store'])
                 ->middleware('guest')
                 ->name('admin.login');
 
-Route::get('/Adminmain', [ValorantController::class, 'Adminmain'])
+Route::get('/Adminmain', [AdminController::class, 'Adminmain'])
                 ->middleware('auth:admins');
 
-Route::get('/verify-email', [EmailVerificationPromptController::class, '__invoke'])
-                ->middleware('auth:admins')
-                ->name('verification.notice');
+Route::get('/complete', [ValorantController::class, 'complete'])
+                ->name('user.complete');
 
-Route::post('/email/verification-notification', [EmailVerificationNotificationController::class, 'store'])
-                ->middleware(['auth:admins', 'throttle:6,1'])
-                ->name('verification.send');
+Route::post('/complete', [ValorantController::class, 'complete'])
+                ->name('complete');
 
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth:admins')
                 ->name('logout');
+
+Route::get('/edit/{id}', [AdminController::class, 'edit'])->name('EntryteamEdit');
+
+Route::post('/delete/{id}', [AdminController::class, 'delete'])->name('EntryteamDelete');
+
+Route::post('/update/{id}', [AdminController::class, 'update'])->name('EntryteamUpdate');

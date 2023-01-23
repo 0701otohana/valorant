@@ -23,6 +23,7 @@ class CreateEntryteamsTable extends Migration
             $table->string('player3');
             $table->string('player4');
             $table->string('player5');
+            $table->softDeletes();
         });
     }
 
