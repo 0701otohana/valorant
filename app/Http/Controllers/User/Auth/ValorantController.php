@@ -26,6 +26,17 @@ class ValorantController extends Controller
         return view('Auth.complete');
     }
 
+    public function destroy(Request $request)
+    {
+        Auth::guard('web')->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/login');
+    }
+
     public function foget() {
         return view('Auth.foget');
     }

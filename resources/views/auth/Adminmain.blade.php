@@ -1,4 +1,4 @@
-@php
+<?php
   $btma = "ZETA";
   $btmb = "SG";
   $btmc = "PRX";
@@ -189,7 +189,7 @@
     }
   }
 
-@endphp
+?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -200,7 +200,7 @@
     <link rel="stylesheet" href="{{ asset('css/Admin.css') }}" type="text/css" media="all">
     <title>管理者画面</title>
 </head>
-@include('valo.header')
+@include('auth.header')
 <body>
 <div id="nav-toggle">
     <div>
@@ -307,7 +307,7 @@
       <tr><td style="width:50px;">6回戦	</td><td style="width:250px;text-align:right;" nowrap>@php  echo $btm3; @endphp<input type=radio value="k" name="bt6" @php   if(!empty($checkk))echo $checkk; @endphp></td><td> vs </td><td style="width:250px;text-align:left;" nowrap><input type=radio value="l" name="bt6" @php  if(!empty($checkl))echo $checkl; @endphp > @php  echo $btm4; @endphp</td></tr>
       <tr><td style="width:50px;">決勝戦		</td><td style="width:250px;text-align:right;" nowrap>@php  echo $btm5; @endphp<input type=radio value="m" name="bt7" @php   if(!empty($checkm))echo $checkm; @endphp></td><td> vs </td><td style="width:250px;text-align:left;" nowrap><input type=radio value="n" name="bt7" @php  if(!empty($checkn))echo $checkn; @endphp > @php  echo $btm6; @endphp</td></tr>
       <tr><td style="width:50px;"> </td><td style="width:250px;text-align:left;" nowrap> </td><td><input type=submit value="更新" name="bt0"></td><td style="width:250px;text-align:left;" nowrap> </td></tr>
-      <tr><td style="width:50px;"> </td><td> </td><td><a href="{{ url('/Adminmain') }}" title="" style="color:white;">reset</a></td><td> </td></tr>
+      <tr><td style="width:50px;"> </td><td> </td><td><a href="{{ ('/admin/Adminmain') }}" title="" style="color:white;">reset</a></td><td> </td></tr>
     </table>
 </form>
 <div class="catch">優勝賞金 <strong>総額100万ドル</strong></div>
@@ -394,6 +394,6 @@
   </section>
 </body>
 
-@include('valo.footer')
+@include('auth.footer')
 </body>
 </html>

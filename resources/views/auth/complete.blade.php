@@ -14,7 +14,12 @@
             <div class="title-box3-title">登録完了画面</div>
             <div class="form-complete">
                 <h1 class="h3 mb-3 font-weight-normal">登録が完了しました。</h1>
-                <div class="Login"><a href="{{ url('/login') }}" class="btn_03">ログイン画面へ</a></div>
+                <div>
+                    <form method="POST" action="{{ ('logout') }}">
+                    @csrf
+                    <input type="submit" value='ログイン画面へ' class="btn_03">
+                    </form>
+                </div>
                 <a class="back" href="{{ url('/main') }}">ホームに戻る</a>
             </div>
         </div>

@@ -37,8 +37,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div>API</div>
-                        <div>API</div>
+                        <a href><img src="/img/apple_logo_PNG19667.png" style="width: 30px;"></a>
+                        <a href><img src="/img/twitter.png" style="width: 30px;"></a>
                     </div>
                     <button class="btn btn-lg btn-primary btn-block" type="submit">ログイン</button>
                     <div class="signup">Riot IDをお持ちでない方 <a href="{{ ('/signup') }}" class="btn_03"><p>新規登録はこちら</p></a></div>

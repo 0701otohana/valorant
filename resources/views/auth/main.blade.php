@@ -1,4 +1,4 @@
-@php
+<?php
   $btma = "ZETA";
   $btmb = "SG";
   $btmc = "PRX";
@@ -188,7 +188,7 @@
         }
     }
   }
-@endphp
+?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -400,7 +400,7 @@
         <p>世界各地で行われるトーナメントシリーズ「VALORANT IGNITION」を開催。</p>
         <p>世界最強を決める「VALORANT Champions」も12月に開催。</p>
         <p>2021年に「VALORANT CHAMPION Tour」が開催され、
-        <p>日本国内でも多数のプロチームが誕生し、しのぎを削っています。</p>
+        <p>日本国内でも多数のプロチームが誕生し、しのぎを削ってる。</p>
     </div>
   </section>
 </main>

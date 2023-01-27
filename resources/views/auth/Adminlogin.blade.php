@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>管理者ログイン画面</title>
 </head>
-<body class="text-center">
+<body class="text-center" style="box-shadow: rgb(247 67 67 / 40%) 5px 5px 5px 680px inset;">
     <img class="logo" src="/img/logo_riot.png">
         <div class="title-box3">
             <div class="title-box3-title">管理者ログインフォーム</div>
@@ -29,8 +29,7 @@
                     @if ($errors->has('password'))
                         <div class="error">{{ $errors->first('password') }}</div>
                     @endif
-                    <div class="API-wrapper"><div>API</div><div>API</div><div>API</div></div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-bottom: 30px;">ログイン</button>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-bottom: 30px; margin-top: 100px;">ログイン</button>
                     <a class="back" href="{{ url('/main') }}">ホームに戻る</a>
             </form>
         </div>

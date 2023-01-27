@@ -10,9 +10,12 @@
     <title>大会エントリーフォーム</title>
 </head>
 <body>
-@include('valo.header')
+@include('auth.header')
     <div class="contact">
         <h1 class="contact-ttl">大会エントリフォーム</h1>
+        <h2>ご応募いただき誠にありがとうございます。</br>
+エントリーいただいたチームの状況を精査して後日エントリー結果をご報告いたします。
+        </h2>
         <form method="POST" action="{{ ('Entrycheck') }}" >
         @csrf
             <table class="contact-table">
@@ -28,7 +31,7 @@
                 <tr>
                     <th class="contact-item">coach</th>
                     <td class="contact-body">
-                        <input type="text" class="form-text" name="coach" value="{{ old('cocah') }}"/>
+                        <input type="text" class="form-text" name="coach" value="{{ old('coach') }}"/>
                         @if ($errors->has('coach'))
                         <div class="error">{{ $errors->first('coach') }}</div>
                         @endif
@@ -88,7 +91,7 @@
         <input type="submit" value='ログアウト'>
         </form>
     </div>
-    @include('valo.footer')
+    @include('auth.footer')
 </body>
 
 </html>

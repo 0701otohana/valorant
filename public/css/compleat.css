@@ -41,6 +41,19 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+input,
+button,
+select,
+textarea {
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+  color: #27acd9;
+}
 /* -------------------------------リセット--------------------------------css */
 
 body {
@@ -162,7 +175,7 @@ h1 {
   padding: 1em;
 }
 
-a.btn_03 {
+.btn_03 {
 	display: block;
 	text-align: center;
 	text-decoration: none;
@@ -172,11 +185,11 @@ a.btn_03 {
 	color: #27acd9;
 	border-radius: 70vh;
 	transition: 0.5s;
-  width: 41%;
-  height:30%;
+  width: 160px;
+  height:50px;
   line-height: 40px;
 }
-a.btn_03:hover {
+.btn_03:hover {
 	color: #fff;
 	background: #27acd9;
 }

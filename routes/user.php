@@ -34,6 +34,14 @@ Route::get('/main', function () {
     return view('Auth.main');
 })->name('Auth.main');
 
+Route::post('/main', function () {
+    return view('Auth.main');
+})->name('Auth.main');
+
+Route::get('/signup/{email}', [RegisteredUserController::class, 'create'])
+    ->middleware('guest')
+    ->name('signup');
+
 Route::get('/signup', [RegisteredUserController::class, 'create'])
     ->middleware('guest')
     ->name('signup');

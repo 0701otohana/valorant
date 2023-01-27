@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Socialite;
 use App\Models\User;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -51,15 +52,16 @@ class LoginController extends Controller
         return Socialite::driver('google')->redirect();
     }
 
-    public function handleGoogleCallback()
+    public function handleGoogleCallback(Request $request)
     {
         $gUser = Socialite::driver('google')->stateless()->user();
         // email が合致するユーザーを取得
         $user = User::where('email', $gUser->email)->first();
-        // 見つからなければ新しくユーザーを作成
         if ($user == null) {
             //$user = $this->createUserByGoogle($gUser);
-            return redirect('/signup');
+            return redirect()->route('user.signup')
+            ->withInput(['email' => $gUser->email])
+            ->with('login_error','Riotに登録されていません。新規登録を行ってください');
         }
         // ログイン処理
         \Auth::login($user, true);

@@ -34,6 +34,7 @@ img[src="/img/logo.png"] {
 body {
     color: rgb(44, 44, 44);
     margin:0px;
+    background-color: #f04752;
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
@@ -70,6 +71,7 @@ body {
 
 .contact-body {
     width: 70%;
+    background-color: white;
 }
 
 .form-text {
@@ -81,15 +83,6 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     max-width: 400px;
-}
-
-.contact-sex + .contact-sex {
-    margin-left: 10px;
-}
-
-.contact-sex-txt {
-    display: inline-block;
-    margin-left: 5px;
 }
 
 .form-select {
@@ -203,10 +196,6 @@ footer {
   display: inline-block;
   font-family: 'Tungsten-Bold', sans-serif;
   padding-left: 30px;
-}
-
-h2 {
-  text-align: center;
 }
 
 .footer_img {

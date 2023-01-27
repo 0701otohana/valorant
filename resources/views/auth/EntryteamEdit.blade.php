@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/EntryForm.css') }}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset('css/EntryteamEdit.css') }}" type="text/css" media="all">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>エントリーチーム編集</title>
 </head>
 <body>
-@include('valo.header')
+@include('auth.header')
     <div class="contact">
         <h1 class="contact-ttl">エントリーチーム編集画面</h1>
         <form method="POST" action="{{ route('admin.EntryteamUpdate', $Entryteam->id) }}" >
@@ -88,7 +88,7 @@
         <input type="submit" value='ログアウト'>
         </form>
     </div>
-    @include('valo.footer')
+    @include('auth.footer')
 </body>
 
 </html>
