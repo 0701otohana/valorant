@@ -41,11 +41,7 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    // ログイン後のリダイレクト先を記述
-    public function redirectPath()
-    {        
-        return redirect()->intended('complete');
-    }
+
 //----------------------------google-------------------------------
     public function redirectToGoogle()
     {
